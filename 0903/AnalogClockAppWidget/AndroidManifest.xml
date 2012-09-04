@@ -1,0 +1,19 @@
+<manifest package="example.application.analogclockwidget"
+    android:versionCode="1"
+    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" />
+
+    <application android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme">
+        <receiver android:label="@string/app_name" android:name="AnalogClockAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:resource="@xml/widget" android:name="android.appwidget.Provider"/>
+        </receiver>
+
+    </application>
+
+</manifest>
